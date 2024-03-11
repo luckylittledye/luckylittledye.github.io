@@ -6,7 +6,7 @@
   <link href="https://luckylittledye.github.io/atom.xml" rel="self"/>
   
   <link href="https://luckylittledye.github.io/"/>
-  <updated>2024-03-11T14:11:24.679Z</updated>
+  <updated>2024-03-11T16:23:11.437Z</updated>
   <id>https://luckylittledye.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://luckylittledye.github.io/2024/03/11/Try-one/"/>
     <id>https://luckylittledye.github.io/2024/03/11/Try-one/</id>
     <published>2024-03-11T14:07:28.000Z</published>
-    <updated>2024-03-11T14:11:24.679Z</updated>
+    <updated>2024-03-11T16:23:11.437Z</updated>
     
-    <content type="html"><![CDATA[<p>在表达式中，byte,short,char是直接转换成int 参与运算的<br>byte a&#x3D;10;<br>short b&#x3D;20;<br>short c&#x3D;a+b;&#x2F;&#x2F;报错</p><p>强制类型转换快捷键  alt+enter</p><p>与  &amp;<br>或  |<br>非  ！<br>异或  ^</p><p>运行Java程序，主要看JVM的的3个内存区域：方法区，栈内存，堆内存</p>]]></content>
+    <content type="html"><![CDATA[<span id="more"></span><p>在表达式中，byte,short,char是直接转换成int 参与运算的<br>byte a&#x3D;10;<br>short b&#x3D;20;<br>short c&#x3D;a+b;&#x2F;&#x2F;报错</p><p>强制类型转换快捷键  alt+enter</p><p>与  &amp;<br>或  |<br>非  ！<br>异或  ^</p><p>运行Java程序，主要看JVM的的3个内存区域：方法区，栈内存，堆内存</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;在表达式中，byte,short,char是直接转换成int 参与运算的&lt;br&gt;byte a&amp;#x3D;10;&lt;br&gt;short b&amp;#x3D;20;&lt;br&gt;short c&amp;#x3D;a+b;&amp;#x2F;&amp;#x2F;报错&lt;/p&gt;
-&lt;p&gt;强制类型转换快捷键  alt+ente</summary>
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+&lt;p&gt;在表达式中，byte,short,char是直接转换成int 参与运算的&lt;br&gt;byte a&amp;#x3D;10;&lt;br&gt;short b&amp;#x3D;20;&lt;br&gt;short c&amp;#x3D;a+b;&amp;#x2F;&amp;#x2F;报错&lt;/p</summary>
       
     
     
