@@ -1,0 +1,16 @@
+在表达式中，byte,short,char是直接转换成int 参与运算的
+byte a=10;
+short b=20;
+short c=a+b;//报错
+
+
+强制类型转换快捷键  alt+enter
+
+
+与  &
+或  |
+非  ！
+异或  ^
+
+
+运行Java程序，主要看JVM的的3个内存区域：方法区，栈内存，堆内存
