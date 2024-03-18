@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Try_one</title>
-    <url>/luckylittledye.github.io/2024/03/11/Try-one/</url>
+    <url>/2024/03/11/Try-one/</url>
     <content><![CDATA[<span id="more"></span>
 <p>在表达式中，byte,short,char是直接转换成int 参与运算的<br>byte a&#x3D;10;<br>short b&#x3D;20;<br>short c&#x3D;a+b;&#x2F;&#x2F;报错</p>
 <p>强制类型转换快捷键  alt+enter</p>
@@ -12,7 +12,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/luckylittledye.github.io/2024/02/13/hello-world/</url>
+    <url>/2024/02/13/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -30,13 +30,13 @@
   </entry>
   <entry>
     <title>my-first blog</title>
-    <url>/luckylittledye.github.io/2024/02/13/my-first-blog/</url>
+    <url>/2024/02/13/my-first-blog/</url>
     <content><![CDATA[<p>这是我的第一个博客。</p>
 ]]></content>
   </entry>
   <entry>
     <title>study_Thread</title>
-    <url>/luckylittledye.github.io/2024/03/18/study-Thread/</url>
+    <url>/2024/03/18/study-Thread/</url>
     <content><![CDATA[<h1 id="多线程创建方式一：继承Thread类"><a href="#多线程创建方式一：继承Thread类" class="headerlink" title="多线程创建方式一：继承Thread类"></a>多线程创建方式一：继承Thread类</h1><p><em>1.定义一个子类MyThread继承线程类java.lang.Thread,重写run方法</em>  </p>
 <p>2.创建MyThread类的对象  </p>
 <p>3.调用线程对象的start()方法启动线程</p>
