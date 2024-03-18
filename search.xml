@@ -34,4 +34,12 @@
     <content><![CDATA[<p>这是我的第一个博客。</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>study_Thread</title>
+    <url>/luckylittledye.github.io/2024/03/18/study-Thread/</url>
+    <content><![CDATA[<h1 id="多线程创建方式一：继承Thread类"><a href="#多线程创建方式一：继承Thread类" class="headerlink" title="多线程创建方式一：继承Thread类"></a>多线程创建方式一：继承Thread类</h1><p><em>1.定义一个子类MyThread继承线程类java.lang.Thread,重写run方法</em>  </p>
+<p>2.创建MyThread类的对象  </p>
+<p>3.调用线程对象的start()方法启动线程</p>
+]]></content>
+  </entry>
 </search>
