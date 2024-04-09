@@ -6,7 +6,7 @@
   <link href="https://luckylittledye/github.io/atom.xml" rel="self"/>
   
   <link href="https://luckylittledye/github.io/"/>
-  <updated>2024-03-18T16:05:07.810Z</updated>
+  <updated>2024-04-09T09:07:54.282Z</updated>
   <id>https://luckylittledye/github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://luckylittledye/github.io/2024/03/18/study-Thread/"/>
     <id>https://luckylittledye/github.io/2024/03/18/study-Thread/</id>
     <published>2024-03-18T14:27:35.000Z</published>
-    <updated>2024-03-18T16:05:07.810Z</updated>
+    <updated>2024-04-09T09:07:54.282Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="多线程创建方式一：继承Thread类"><a href="#多线程创建方式一：继承Thread类" class="headerlink" title="多线程创建方式一：继承Thread类"></a>多线程创建方式一：继承Thread类</h1><p><em>1.定义一个子类MyThread继承线程类java.lang.Thread,重写run方法</em>  </p><p><em>2.创建MyThread类的对象</em>  </p><p><em>3.调用线程对象的start()方法启动线程</em>  </p><h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><p><em>优点：编码简单</em><br><em>缺点：线程类已经继承Thread,无法再继承其他类，不利于功能的扩展</em> </p><h1 id="多线程创建方式二：实现Runnable接口"><a href="#多线程创建方式二：实现Runnable接口" class="headerlink" title="多线程创建方式二：实现Runnable接口"></a>多线程创建方式二：实现Runnable接口</h1><p><em>1.定义一个线程任务类MyRunnable实现Runnable接口,重写run方法</em>  </p><p><em>2.创建MyRunnable任务对象</em>  </p><p><em>3.把MyRunnable任务对象交给Thread处理</em></p><p><em>4.调用线程对象的start()方法启动线程</em>  </p><h3 id="优缺点-1"><a href="#优缺点-1" class="headerlink" title="优缺点"></a>优缺点</h3><p><em>优点：任务类只是实现接口，可以继续继承其他类，实现其他接口，扩展性强</em>  </p><h2 id="方式二的匿名内部类写法"><a href="#方式二的匿名内部类写法" class="headerlink" title="方式二的匿名内部类写法"></a>方式二的匿名内部类写法</h2><p><em>1.创建Runnable的匿名内部类对象</em></p><p><em>2.交给Thread线程对象</em>  </p><p><em>3.调用线程对象的start()启动线程</em></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="多线程创建方式一：继承Thread类"><a href="#多线程创建方式一：继承Thread类" class="headerlink" title="多线程创建方式一：继承Thread类"></a>多线程创建方式一：继承Thread类</h1><p><em>1.定义一个子类MyThread继承线程类java.lang.Thread,重写run方法</em>  </p><p><em>2.创建MyThread类的对象</em>  </p><p><em>3.调用线程对象的start()方法启动线程</em>  </p><h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><p><em>优点：编码简单</em><br><em>缺点：线程类已经继承Thread,无法再继承其他类，不利于功能的扩展</em> </p><h1 id="多线程创建方式二：实现Runnable接口"><a href="#多线程创建方式二：实现Runnable接口" class="headerlink" title="多线程创建方式二：实现Runnable接口"></a>多线程创建方式二：实现Runnable接口</h1><p><em>1.定义一个线程任务类MyRunnable实现Runnable接口,重写run方法</em>  </p><p><em>2.创建MyRunnable任务对象</em>  </p><p><em>3.把MyRunnable任务对象交给Thread处理</em></p><p><em>4.调用线程对象的start()方法启动线程</em>  </p><h3 id="优缺点-1"><a href="#优缺点-1" class="headerlink" title="优缺点"></a>优缺点</h3><p><em>优点：任务类只是实现接口，可以继续继承其他类，实现其他接口，扩展性强</em>  </p><h2 id="方式二的匿名内部类写法"><a href="#方式二的匿名内部类写法" class="headerlink" title="方式二的匿名内部类写法"></a>方式二的匿名内部类写法</h2><p><em>1.创建Runnable的匿名内部类对象</em></p><p><em>2.交给Thread线程对象</em>  </p><p><em>3.调用线程对象的start()启动线程</em></p><h1 id="多线程创建方式三：利用Callable接口、FutureTask接口实现"><a href="#多线程创建方式三：利用Callable接口、FutureTask接口实现" class="headerlink" title="多线程创建方式三：利用Callable接口、FutureTask接口实现"></a>多线程创建方式三：利用Callable接口、FutureTask接口实现</h1><p><em>1.创建任务对象</em><br><em>-定义一个类实现Callable接口，重写call方法，封装要做的事和要返回的数据</em><br><em>-把Callable类型的对象封装成FuturetTask(线程任务对象)</em></p><p><em>2.把线程任务对象交给Thread对象</em></p><p><em>3.调用Thread对象的start方法启动线程</em></p><p><em>4.线程执行完毕后，通过FUtureTask对象的get方法去获取线程任务执行的结果</em></p><h3 id="优缺点-2"><a href="#优缺点-2" class="headerlink" title="优缺点"></a>优缺点</h3><p><em>优点：任务类只是实现接口，可以继续继承其他类，实现其他接口，扩展性强;可以获取线程执行的结果</em>  </p>]]></content>
     
     
       

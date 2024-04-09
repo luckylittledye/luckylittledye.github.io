@@ -29,12 +29,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>my-first blog</title>
-    <url>/2024/02/13/my-first-blog/</url>
-    <content><![CDATA[<p>这是我的第一个博客。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>study_Thread</title>
     <url>/2024/03/18/study-Thread/</url>
     <content><![CDATA[<h1 id="多线程创建方式一：继承Thread类"><a href="#多线程创建方式一：继承Thread类" class="headerlink" title="多线程创建方式一：继承Thread类"></a>多线程创建方式一：继承Thread类</h1><p><em>1.定义一个子类MyThread继承线程类java.lang.Thread,重写run方法</em>  </p>
@@ -49,6 +43,17 @@
 <h2 id="方式二的匿名内部类写法"><a href="#方式二的匿名内部类写法" class="headerlink" title="方式二的匿名内部类写法"></a>方式二的匿名内部类写法</h2><p><em>1.创建Runnable的匿名内部类对象</em></p>
 <p><em>2.交给Thread线程对象</em>  </p>
 <p><em>3.调用线程对象的start()启动线程</em></p>
+<h1 id="多线程创建方式三：利用Callable接口、FutureTask接口实现"><a href="#多线程创建方式三：利用Callable接口、FutureTask接口实现" class="headerlink" title="多线程创建方式三：利用Callable接口、FutureTask接口实现"></a>多线程创建方式三：利用Callable接口、FutureTask接口实现</h1><p><em>1.创建任务对象</em><br><em>-定义一个类实现Callable接口，重写call方法，封装要做的事和要返回的数据</em><br><em>-把Callable类型的对象封装成FuturetTask(线程任务对象)</em></p>
+<p><em>2.把线程任务对象交给Thread对象</em></p>
+<p><em>3.调用Thread对象的start方法启动线程</em></p>
+<p><em>4.线程执行完毕后，通过FUtureTask对象的get方法去获取线程任务执行的结果</em></p>
+<h3 id="优缺点-2"><a href="#优缺点-2" class="headerlink" title="优缺点"></a>优缺点</h3><p><em>优点：任务类只是实现接口，可以继续继承其他类，实现其他接口，扩展性强;可以获取线程执行的结果</em>  </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>my-first blog</title>
+    <url>/2024/02/13/my-first-blog/</url>
+    <content><![CDATA[<p>这是我的第一个博客。</p>
 ]]></content>
   </entry>
 </search>
