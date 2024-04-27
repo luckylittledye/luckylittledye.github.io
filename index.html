@@ -200,6 +200,13 @@
 
               <time title="创建时间：2024-04-27 22:27:04" itemprop="dateCreated datePublished" datetime="2024-04-27T22:27:04+08:00">2024-04-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-28 01:00:43" itemprop="dateModified" datetime="2024-04-28T01:00:43+08:00">2024-04-28</time>
+              </span>
 
           
 
@@ -212,7 +219,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="获取Class对象的三种方式"><a href="#获取Class对象的三种方式" class="headerlink" title="获取Class对象的三种方式"></a>获取Class对象的三种方式</h1><p>●Classc1 &#x3D;类名.class</p>
+<p>●调用Class提供方 法: public static Class forName(String package);</p>
+<p>●0bject提供的方法: public Class getClass(); Class c3 &#x3D;对象.getClass();  </p>
+<h2 id="从类中获取构造器的方法和作用"><a href="#从类中获取构造器的方法和作用" class="headerlink" title="从类中获取构造器的方法和作用"></a>从类中获取构造器的方法和作用</h2><p>getConstructors()&#x2F;&#x2F;获取全部构造器(只能获取public修饰的)</p>
+<p>getDeclaredConstructors()&#x2F;&#x2F;获取全部构造器(只要存在就能拿到)</p>
+<p>getConstructor(Class parameterTypes)&#x2F;&#x2F;获取某个构造器(只能获取public修饰的)</p>
+<p>getDeclaredConstructor(Class parameterTypes) 获取某个构造器(只要存在就能拿到)</p>
+<p>newInstance(参数)&#x2F;&#x2F;调用此构造器对象表示的构造器，并传入参数，完成对象的初始化并返回  </p>
+<p>setAccessible(boolean flag)&#x2F;&#x2F;设置为true，表示禁止检查访问控制（暴力反射，可调用private构造器）  </p>
+<h2 id="从类中获取成员变量的方法和作用"><a href="#从类中获取成员变量的方法和作用" class="headerlink" title="从类中获取成员变量的方法和作用"></a>从类中获取成员变量的方法和作用</h2><p>getFields()<br>getDeclaredFields()<br>getField(String name)<br>getDeclaredField(String name)  </p>
+<p>作用：赋值<br>set()<br>get()<br>setAccessible(boolean flag)  </p>
+<h2 id="从类中获取成员方法的方法和作用"><a href="#从类中获取成员方法的方法和作用" class="headerlink" title="从类中获取成员方法的方法和作用"></a>从类中获取成员方法的方法和作用</h2><p>getMethods()<br>getDeclaredMethods()<br>getMethod(String name, Class<?>... parameterTypes)  
+getDeclaredMethod(String name, Class<?>… parameterTypes)  </p>
+<p>作用：执行<br>invoke(0bject obj, object… args)<br>setAccessible(boolean f1ag)  </p>
+
       
     </div>
 

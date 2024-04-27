@@ -20,13 +20,15 @@
     var CONFIG = {"hostname":"luckylittledye","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="获取Class对象的三种方式●Classc1 &#x3D;类名.class ●调用Class提供方 法: public static Class forName(String package); ●0bject提供的方法: public Class getClass(); Class c3 &#x3D;对象.getClass();   从类中获取构造器的方法和作用getConstructors()">
+<meta property="og:type" content="article">
 <meta property="og:title" content="反射">
 <meta property="og:url" content="https://luckylittledye/github.io/2024/04/27/%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="获取Class对象的三种方式●Classc1 &#x3D;类名.class ●调用Class提供方 法: public static Class forName(String package); ●0bject提供的方法: public Class getClass(); Class c3 &#x3D;对象.getClass();   从类中获取构造器的方法和作用getConstructors()">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-27T14:27:04.000Z">
-<meta property="article:modified_time" content="2024-04-27T14:27:04.926Z">
+<meta property="article:modified_time" content="2024-04-27T17:00:43.077Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -202,6 +204,13 @@
 
               <time title="创建时间：2024-04-27 22:27:04" itemprop="dateCreated datePublished" datetime="2024-04-27T22:27:04+08:00">2024-04-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-28 01:00:43" itemprop="dateModified" datetime="2024-04-28T01:00:43+08:00">2024-04-28</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -221,7 +230,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h1 id="获取Class对象的三种方式"><a href="#获取Class对象的三种方式" class="headerlink" title="获取Class对象的三种方式"></a>获取Class对象的三种方式</h1><p>●Classc1 &#x3D;类名.class</p>
+<p>●调用Class提供方 法: public static Class forName(String package);</p>
+<p>●0bject提供的方法: public Class getClass(); Class c3 &#x3D;对象.getClass();  </p>
+<h2 id="从类中获取构造器的方法和作用"><a href="#从类中获取构造器的方法和作用" class="headerlink" title="从类中获取构造器的方法和作用"></a>从类中获取构造器的方法和作用</h2><p>getConstructors()&#x2F;&#x2F;获取全部构造器(只能获取public修饰的)</p>
+<p>getDeclaredConstructors()&#x2F;&#x2F;获取全部构造器(只要存在就能拿到)</p>
+<p>getConstructor(Class parameterTypes)&#x2F;&#x2F;获取某个构造器(只能获取public修饰的)</p>
+<p>getDeclaredConstructor(Class parameterTypes) 获取某个构造器(只要存在就能拿到)</p>
+<p>newInstance(参数)&#x2F;&#x2F;调用此构造器对象表示的构造器，并传入参数，完成对象的初始化并返回  </p>
+<p>setAccessible(boolean flag)&#x2F;&#x2F;设置为true，表示禁止检查访问控制（暴力反射，可调用private构造器）  </p>
+<h2 id="从类中获取成员变量的方法和作用"><a href="#从类中获取成员变量的方法和作用" class="headerlink" title="从类中获取成员变量的方法和作用"></a>从类中获取成员变量的方法和作用</h2><p>getFields()<br>getDeclaredFields()<br>getField(String name)<br>getDeclaredField(String name)  </p>
+<p>作用：赋值<br>set()<br>get()<br>setAccessible(boolean flag)  </p>
+<h2 id="从类中获取成员方法的方法和作用"><a href="#从类中获取成员方法的方法和作用" class="headerlink" title="从类中获取成员方法的方法和作用"></a>从类中获取成员方法的方法和作用</h2><p>getMethods()<br>getDeclaredMethods()<br>getMethod(String name, Class<?>... parameterTypes)  
+getDeclaredMethod(String name, Class<?>… parameterTypes)  </p>
+<p>作用：执行<br>invoke(0bject obj, object… args)<br>setAccessible(boolean f1ag)  </p>
+
     </div>
 
     
@@ -298,6 +321,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96Class%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">获取Class对象的三种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E7%B1%BB%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">从类中获取构造器的方法和作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E7%B1%BB%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">从类中获取成员变量的方法和作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E7%B1%BB%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">从类中获取成员方法的方法和作用</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
