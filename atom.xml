@@ -6,7 +6,7 @@
   <link href="https://luckylittledye/github.io/atom.xml" rel="self"/>
   
   <link href="https://luckylittledye/github.io/"/>
-  <updated>2024-04-27T17:00:43.077Z</updated>
+  <updated>2024-05-03T15:44:28.156Z</updated>
   <id>https://luckylittledye/github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>事务和索引</title>
+    <link href="https://luckylittledye/github.io/2024/05/03/%E4%BA%8B%E5%8A%A1%E5%92%8C%E7%B4%A2%E5%BC%95/"/>
+    <id>https://luckylittledye/github.io/2024/05/03/%E4%BA%8B%E5%8A%A1%E5%92%8C%E7%B4%A2%E5%BC%95/</id>
+    <published>2024-05-03T14:27:17.000Z</published>
+    <updated>2024-05-03T15:44:28.156Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><p><em>开启事务：start transaction;&#x2F;begin;<br>提交事务：commit;<br>回滚事务：rollback;</em></p><h2 id="四大特性（ACID）"><a href="#四大特性（ACID）" class="headerlink" title="四大特性（ACID）"></a>四大特性（ACID）</h2><p><em>原子性：事务是不可分割的最小单元，要么全部成功，要么全部失败；<br>一致性：事务完成时，必须使所有的数据都保持一致状态；<br>隔离性：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行；<br>持久性：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</em>  </p><h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p>帮助数据库高效获取数据的数据结构。  </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;事务&quot;&gt;&lt;a href=&quot;#事务&quot; class=&quot;headerlink&quot; title=&quot;事务&quot;&gt;&lt;/a&gt;事务&lt;/h1&gt;&lt;p&gt;&lt;em&gt;开启事务：start transaction;&amp;#x2F;begin;&lt;br&gt;提交事务：commit;&lt;br&gt;回滚事务：rollba</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>maven项目</title>
+    <link href="https://luckylittledye/github.io/2024/04/28/maven%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://luckylittledye/github.io/2024/04/28/maven%E9%A1%B9%E7%9B%AE/</id>
+    <published>2024-04-28T15:03:11.000Z</published>
+    <updated>2024-04-28T15:12:30.402Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="maven项目目录情况"><a href="#maven项目目录情况" class="headerlink" title="maven项目目录情况"></a>maven项目目录情况</h1><p><em>-src<br>&emsp;-main&emsp;&#x2F;&#x2F;存放项目资源<br>&emsp;&emsp;-java&emsp;&#x2F;&#x2F;java源代码<br>&emsp;&emsp;-resource&emsp;&#x2F;&#x2F;配置文件<br>&emsp;-test&emsp;&#x2F;&#x2F;存放测试资源<br>&emsp;&emsp;-java&emsp;&#x2F;&#x2F;java源代码<br>&emsp;&emsp;-resource&emsp;&#x2F;&#x2F;配置文件(不常用)</em>  </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;maven项目目录情况&quot;&gt;&lt;a href=&quot;#maven项目目录情况&quot; class=&quot;headerlink&quot; title=&quot;maven项目目录情况&quot;&gt;&lt;/a&gt;maven项目目录情况&lt;/h1&gt;&lt;p&gt;&lt;em&gt;-src&lt;br&gt;&amp;emsp;-main&amp;emsp;&amp;#x2F</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>反射</title>
