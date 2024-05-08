@@ -25,15 +25,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>MybatisPlus</title>
+    <url>/2024/05/08/MybatisPlus/</url>
+    <content><![CDATA[<h1 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h1><img src="D:/blog/source/_posts/md/MybatisPlus1.jpg"/>
+![图片](D:/blog/source/_posts/md/MybatisPlus1.jpg)]]></content>
+  </entry>
+  <entry>
     <title>Junit</title>
     <url>/2024/04/23/Junit/</url>
     <content><![CDATA[<h1 id="Junit单元测试框架常用注解（Juint4）"><a href="#Junit单元测试框架常用注解（Juint4）" class="headerlink" title="Junit单元测试框架常用注解（Juint4）"></a>Junit单元测试框架常用注解（Juint4）</h1><p>@Test&emsp;测试类中的方法必须用它修饰才能成为测试方法，才能启动执行<br>@Before&emsp;用来修饰一个实例方法， 该方法会在每一一个测 试方法执行之前执行一次。<br>@After&emsp;来修饰一个实例方法， 该方法会在每一一个测 试方法执行之后执行一-次。<br>@BeforeClass&emsp;用来修饰一个静态方法， 该方法会在所有 测试方法之前只执行一次。<br>@AfterClass&emsp;用来修饰一个静态方法，该方法会在所有测试方法之后只执行一-次。<br>●在测试方法执行前执行的方法, 常用于:初始化资源。<br>●在测试方法执行完后再执行的方法，常用于:释放资源。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>MybatisPlus</title>
-    <url>/2024/05/08/MybatisPlus/</url>
-    <content><![CDATA[<h1 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h1><p><img src="D:/blog/source/_posts/md/MybatisPlus1.jpg" alt="图片"></p>
 ]]></content>
   </entry>
   <entry>
@@ -105,6 +105,17 @@
 ]]></content>
   </entry>
   <entry>
+    <title>事务和索引</title>
+    <url>/2024/05/03/%E4%BA%8B%E5%8A%A1%E5%92%8C%E7%B4%A2%E5%BC%95/</url>
+    <content><![CDATA[<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><p><em>开启事务：start transaction;&#x2F;begin;<br>提交事务：commit;<br>回滚事务：rollback;</em></p>
+<h3 id="四大特性（ACID）"><a href="#四大特性（ACID）" class="headerlink" title="四大特性（ACID）"></a>四大特性（ACID）</h3><p><em>原子性：事务是不可分割的最小单元，要么全部成功，要么全部失败；<br>一致性：事务完成时，必须使所有的数据都保持一致状态；<br>隔离性：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行；<br>持久性：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</em>  </p>
+<h3 id="spring事务管理"><a href="#spring事务管理" class="headerlink" title="spring事务管理"></a>spring事务管理</h3><p><em>spring事务管理注解:@Transactional(rollbackfor,propagation)<br>-rollbackfor控制出现何种异常类型后回滚事务<br>&emsp;Exception.class：任何异常都回滚事务<br>-propagation控制事务传播行为<br>&emsp;REQUIRED：默认，需要事务，有则加入，无则创建新事务<br>&emsp;REQUIRES_NEW：需要新事务，无论有无，总是创建新事务</em>  </p>
+<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p><em>帮助数据库高效获取数据的数据结构。</em>  </p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p><em>提高数据查询的效率，降低数据库的IO成本。<br>通过索引列对数据进行排序，降低数据排序的成本，降低CPU消耗。</em>  </p>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p><em>索引会 占用存储空间。<br>索引大大提高了查询效率，同时却也降低了insert、update、delete的效率。</em></p>
+]]></content>
+  </entry>
+  <entry>
     <title>反射</title>
     <url>/2024/04/27/%E5%8F%8D%E5%B0%84/</url>
     <content><![CDATA[<h1 id="获取Class对象的三种方式"><a href="#获取Class对象的三种方式" class="headerlink" title="获取Class对象的三种方式"></a>获取Class对象的三种方式</h1><p>●Classc1 &#x3D;类名.class</p>
@@ -121,17 +132,6 @@
 <h2 id="从类中获取成员方法的方法和作用"><a href="#从类中获取成员方法的方法和作用" class="headerlink" title="从类中获取成员方法的方法和作用"></a>从类中获取成员方法的方法和作用</h2><p>getMethods()<br>getDeclaredMethods()<br>getMethod(String name, Class<?>... parameterTypes)  
 getDeclaredMethod(String name, Class<?>… parameterTypes)  </p>
 <p>作用：执行<br>invoke(0bject obj, object… args)<br>setAccessible(boolean f1ag)  </p>
-]]></content>
-  </entry>
-  <entry>
-    <title>事务和索引</title>
-    <url>/2024/05/03/%E4%BA%8B%E5%8A%A1%E5%92%8C%E7%B4%A2%E5%BC%95/</url>
-    <content><![CDATA[<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><p><em>开启事务：start transaction;&#x2F;begin;<br>提交事务：commit;<br>回滚事务：rollback;</em></p>
-<h3 id="四大特性（ACID）"><a href="#四大特性（ACID）" class="headerlink" title="四大特性（ACID）"></a>四大特性（ACID）</h3><p><em>原子性：事务是不可分割的最小单元，要么全部成功，要么全部失败；<br>一致性：事务完成时，必须使所有的数据都保持一致状态；<br>隔离性：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行；<br>持久性：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</em>  </p>
-<h3 id="spring事务管理"><a href="#spring事务管理" class="headerlink" title="spring事务管理"></a>spring事务管理</h3><p><em>spring事务管理注解:@Transactional(rollbackfor,propagation)<br>-rollbackfor控制出现何种异常类型后回滚事务<br>&emsp;Exception.class：任何异常都回滚事务<br>-propagation控制事务传播行为<br>&emsp;REQUIRED：默认，需要事务，有则加入，无则创建新事务<br>&emsp;REQUIRES_NEW：需要新事务，无论有无，总是创建新事务</em>  </p>
-<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p><em>帮助数据库高效获取数据的数据结构。</em>  </p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p><em>提高数据查询的效率，降低数据库的IO成本。<br>通过索引列对数据进行排序，降低数据排序的成本，降低CPU消耗。</em>  </p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p><em>索引会 占用存储空间。<br>索引大大提高了查询效率，同时却也降低了insert、update、delete的效率。</em></p>
 ]]></content>
   </entry>
 </search>
