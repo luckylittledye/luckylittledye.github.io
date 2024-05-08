@@ -6,7 +6,7 @@
   <link href="https://luckylittledye/github.io/atom.xml" rel="self"/>
   
   <link href="https://luckylittledye/github.io/"/>
-  <updated>2024-05-03T15:44:28.156Z</updated>
+  <updated>2024-05-08T13:40:08.622Z</updated>
   <id>https://luckylittledye/github.io/</id>
   
   <author>
@@ -17,13 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MybatisPlus</title>
+    <link href="https://luckylittledye/github.io/2024/05/08/MybatisPlus/"/>
+    <id>https://luckylittledye/github.io/2024/05/08/MybatisPlus/</id>
+    <published>2024-05-08T13:36:35.000Z</published>
+    <updated>2024-05-08T13:40:08.622Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h1><p><img src="D:/blog/source/_posts/md/MybatisPlus1.jpg" alt="图片"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;常用注解&quot;&gt;&lt;a href=&quot;#常用注解&quot; class=&quot;headerlink&quot; title=&quot;常用注解&quot;&gt;&lt;/a&gt;常用注解&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;D:/blog/source/_posts/md/MybatisPlus1.jpg&quot; alt=&quot;图片&quot;&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AOP</title>
+    <link href="https://luckylittledye/github.io/2024/05/06/AOP/"/>
+    <id>https://luckylittledye/github.io/2024/05/06/AOP/</id>
+    <published>2024-05-06T14:40:54.000Z</published>
+    <updated>2024-05-06T17:26:45.876Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h1><p>◆动态代理是面向切面编程最主流的实现。而SpringAOP 是Spring框架的高级技术,旨在管理bean对象的过程中，主要通过底层的动态代理机制,对特定的方法进行编程。  </p><h1 id="AOP核心概念"><a href="#AOP核心概念" class="headerlink" title="AOP核心概念"></a>AOP核心概念</h1><p>●连接点: JoinPoint,可以被AOP控制的方法( 暗含方法执行时的相关信息)<br>●通知: Advice,指哪些重复的逻辑,也就是共性功能(最终体现为一个方法)<br>●切入点: PointCut,匹配连接点的条件,通知仅会在切入点方法执行时被应用<br>●切面: Aspect,描述通知与切入点的对应关系(通知+切入点)<br>●目标对象: Target, 通知所应用的对象  </p><h3 id="通知"><a href="#通知" class="headerlink" title="通知"></a>通知</h3><h4 id="通知类型"><a href="#通知类型" class="headerlink" title="通知类型"></a>通知类型</h4><ol><li>@Around: 环绕通知，此注解标注的通知方法在目标方法前、后都被执行</li><li>@Before: 前置通知，此注解标注的通知方法在目标方法前被执行</li><li>@After :后置通知，此注解标注的通知方法在目标方法后被执行，无论是否有异常都会执行</li><li>@AfterReturning :返回后通知， 此注解标注的通知方法在目标方法后被执行，有异常不会执行</li><li>@AfterThrowing :异常后通知，此注解标注的通知方法发生异常后执行</li></ol><h4 id="通知顺序"><a href="#通知顺序" class="headerlink" title="通知顺序"></a>通知顺序</h4><ol><li>不同切面类中，默认按照切面类的类名字母排序:<br>◆目标方法前的通知方法:字母排名靠前的先执行<br>◆目标方法后的通知方法:字母排名靠前的后执行  </li><li>用@Order(数字)加在切面类上来控制顺序<br>◆目标方法前的通知方法:数字小的先执行<br>◆目标方法后的通知方法:数字小的后执行</li></ol><h3 id="切入点表达式-execution"><a href="#切入点表达式-execution" class="headerlink" title="切入点表达式-execution"></a>切入点表达式-execution</h3><ol><li>execution主要根据方法的返回值、包名、类名、方法名、方法参数等信息来匹配，语法为:<br>execution(访问修饰符?返回值包名 .类名. ?方法名(方法参数) throws异常)<br>●其中带 ?的表示可以省略的部分<br>◆访问修饰符:可省略(比如:public、protected)<br>◆包名.类名:可省略<br>◆throws 异常:可省略(注意是方法.上声明抛出的异常，不是实际抛出的异常)  </li><li>execution(@annotion(自定义注解的全类名))<br>在要匹配的方法上加上自定义注解</li></ol><h3 id="连接点"><a href="#连接点" class="headerlink" title="连接点"></a>连接点</h3><p>●在Spring中 用JoinPoint抽象了连接点，用它可以获得方法执行时的相关信息，如目标类名、方法名、方法参数等。<br>➢对于@Around通知，获取连接点信息只能使用ProceedingJoinPoint<br>➢对于其他四种通知，获取连接点信息只能使用  JoinPoint ，它是ProceedingJoinPoint 的父类型  </p><p>String className &#x3D; joinPoint . getTarget(). getClass(). getName(); &#x2F;&#x2F;获取目标类名<br>Signature signature &#x3D; joinPoint . getSignature(); &#x2F;&#x2F;获取目标方法签名<br>String methodName &#x3D; joinPoint . getSignature(). getName(); &#x2F;&#x2F;获取目标方法名<br>Object[] args &#x3D; joinPoint. getArgs(); &#x2F;&#x2F;获取目标方法运行参数  </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;AOP&quot;&gt;&lt;a href=&quot;#AOP&quot; class=&quot;headerlink&quot; title=&quot;AOP&quot;&gt;&lt;/a&gt;AOP&lt;/h1&gt;&lt;p&gt;◆动态代理是面向切面编程最主流的实现。而SpringAOP 是Spring框架的高级技术,旨在管理bean对象的过程中，主要通过底层</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>事务和索引</title>
     <link href="https://luckylittledye/github.io/2024/05/03/%E4%BA%8B%E5%8A%A1%E5%92%8C%E7%B4%A2%E5%BC%95/"/>
     <id>https://luckylittledye/github.io/2024/05/03/%E4%BA%8B%E5%8A%A1%E5%92%8C%E7%B4%A2%E5%BC%95/</id>
     <published>2024-05-03T14:27:17.000Z</published>
-    <updated>2024-05-03T15:44:28.156Z</updated>
+    <updated>2024-05-04T14:19:13.321Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><p><em>开启事务：start transaction;&#x2F;begin;<br>提交事务：commit;<br>回滚事务：rollback;</em></p><h2 id="四大特性（ACID）"><a href="#四大特性（ACID）" class="headerlink" title="四大特性（ACID）"></a>四大特性（ACID）</h2><p><em>原子性：事务是不可分割的最小单元，要么全部成功，要么全部失败；<br>一致性：事务完成时，必须使所有的数据都保持一致状态；<br>隔离性：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行；<br>持久性：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</em>  </p><h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p>帮助数据库高效获取数据的数据结构。  </p>]]></content>
+    <content type="html"><![CDATA[<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><p><em>开启事务：start transaction;&#x2F;begin;<br>提交事务：commit;<br>回滚事务：rollback;</em></p><h3 id="四大特性（ACID）"><a href="#四大特性（ACID）" class="headerlink" title="四大特性（ACID）"></a>四大特性（ACID）</h3><p><em>原子性：事务是不可分割的最小单元，要么全部成功，要么全部失败；<br>一致性：事务完成时，必须使所有的数据都保持一致状态；<br>隔离性：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行；<br>持久性：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</em>  </p><h3 id="spring事务管理"><a href="#spring事务管理" class="headerlink" title="spring事务管理"></a>spring事务管理</h3><p><em>spring事务管理注解:@Transactional(rollbackfor,propagation)<br>-rollbackfor控制出现何种异常类型后回滚事务<br>&emsp;Exception.class：任何异常都回滚事务<br>-propagation控制事务传播行为<br>&emsp;REQUIRED：默认，需要事务，有则加入，无则创建新事务<br>&emsp;REQUIRES_NEW：需要新事务，无论有无，总是创建新事务</em>  </p><h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p><em>帮助数据库高效获取数据的数据结构。</em>  </p><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p><em>提高数据查询的效率，降低数据库的IO成本。<br>通过索引列对数据进行排序，降低数据排序的成本，降低CPU消耗。</em>  </p><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p><em>索引会 占用存储空间。<br>索引大大提高了查询效率，同时却也降低了insert、update、delete的效率。</em></p>]]></content>
     
     
       

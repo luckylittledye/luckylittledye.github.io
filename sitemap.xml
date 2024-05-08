@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luckylittledye/github.io/2024/05/08/MybatisPlus/</loc>
+    
+    <lastmod>2024-05-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://luckylittledye/github.io/2024/05/06/AOP/</loc>
+    
+    <lastmod>2024-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://luckylittledye/github.io/2024/05/03/%E4%BA%8B%E5%8A%A1%E5%92%8C%E7%B4%A2%E5%BC%95/</loc>
     
-    <lastmod>2024-05-03</lastmod>
+    <lastmod>2024-05-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,7 +94,7 @@
 
   <url>
     <loc>https://luckylittledye/github.io</loc>
-    <lastmod>2024-05-03</lastmod>
+    <lastmod>2024-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"luckylittledye","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Junit单元测试框架常用注解（Juint4）@Test&emsp;测试类中的方法必须用它修饰才能成为测试方法，才能启动执行@Before&emsp;用来修饰一个实例方法， 该方法会在每一一个测 试方法执行之前执行一次。@After&emsp;来修饰一个实例方法， 该方法会在每一一个测 试方法执行之后执行一-次。@BeforeClass&emsp;用来修饰一个静态方法， 该方法会在所有 测试方法之">
+  <meta name="description" content="AOP◆动态代理是面向切面编程最主流的实现。而SpringAOP 是Spring框架的高级技术,旨在管理bean对象的过程中，主要通过底层的动态代理机制,对特定的方法进行编程。   AOP核心概念●连接点: JoinPoint,可以被AOP控制的方法( 暗含方法执行时的相关信息)●通知: Advice,指哪些重复的逻辑,也就是共性功能(最终体现为一个方法)●切入点: PointCut,匹配连接点的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Junit">
-<meta property="og:url" content="https://luckylittledye/github.io/2024/04/23/Junit/index.html">
+<meta property="og:title" content="AOP">
+<meta property="og:url" content="https://luckylittledye/github.io/2024/05/06/AOP/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Junit单元测试框架常用注解（Juint4）@Test&emsp;测试类中的方法必须用它修饰才能成为测试方法，才能启动执行@Before&emsp;用来修饰一个实例方法， 该方法会在每一一个测 试方法执行之前执行一次。@After&emsp;来修饰一个实例方法， 该方法会在每一一个测 试方法执行之后执行一-次。@BeforeClass&emsp;用来修饰一个静态方法， 该方法会在所有 测试方法之">
+<meta property="og:description" content="AOP◆动态代理是面向切面编程最主流的实现。而SpringAOP 是Spring框架的高级技术,旨在管理bean对象的过程中，主要通过底层的动态代理机制,对特定的方法进行编程。   AOP核心概念●连接点: JoinPoint,可以被AOP控制的方法( 暗含方法执行时的相关信息)●通知: Advice,指哪些重复的逻辑,也就是共性功能(最终体现为一个方法)●切入点: PointCut,匹配连接点的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-04-23T08:15:46.000Z">
-<meta property="article:modified_time" content="2024-04-23T08:52:48.108Z">
+<meta property="article:published_time" content="2024-05-06T14:40:54.000Z">
+<meta property="article:modified_time" content="2024-05-06T17:26:45.876Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://luckylittledye/github.io/2024/04/23/Junit/">
+<link rel="canonical" href="https://luckylittledye/github.io/2024/05/06/AOP/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>Junit | Hexo</title>
+  <title>AOP | Hexo</title>
   
 
 
@@ -179,7 +179,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://luckylittledye/github.io/2024/04/23/Junit/">
+    <link itemprop="mainEntityOfPage" href="https://luckylittledye/github.io/2024/05/06/AOP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +192,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Junit
+          AOP
         </h1>
 
         <div class="post-meta">
@@ -201,10 +201,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-04-23 16:15:46 / 修改时间：16:52:48" itemprop="dateCreated datePublished" datetime="2024-04-23T16:15:46+08:00">2024-04-23</time>
+              <time title="创建时间：2024-05-06 22:40:54" itemprop="dateCreated datePublished" datetime="2024-05-06T22:40:54+08:00">2024-05-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-07 01:26:45" itemprop="dateModified" datetime="2024-05-07T01:26:45+08:00">2024-05-07</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -224,7 +230,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Junit单元测试框架常用注解（Juint4）"><a href="#Junit单元测试框架常用注解（Juint4）" class="headerlink" title="Junit单元测试框架常用注解（Juint4）"></a>Junit单元测试框架常用注解（Juint4）</h1><p>@Test&emsp;测试类中的方法必须用它修饰才能成为测试方法，才能启动执行<br>@Before&emsp;用来修饰一个实例方法， 该方法会在每一一个测 试方法执行之前执行一次。<br>@After&emsp;来修饰一个实例方法， 该方法会在每一一个测 试方法执行之后执行一-次。<br>@BeforeClass&emsp;用来修饰一个静态方法， 该方法会在所有 测试方法之前只执行一次。<br>@AfterClass&emsp;用来修饰一个静态方法，该方法会在所有测试方法之后只执行一-次。<br>●在测试方法执行前执行的方法, 常用于:初始化资源。<br>●在测试方法执行完后再执行的方法，常用于:释放资源。</p>
+        <h1 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h1><p>◆动态代理是面向切面编程最主流的实现。而SpringAOP 是Spring框架的高级技术,旨在管理bean对象的过程中，主要通过底层的动态代理机制,对特定的方法进行编程。  </p>
+<h1 id="AOP核心概念"><a href="#AOP核心概念" class="headerlink" title="AOP核心概念"></a>AOP核心概念</h1><p>●连接点: JoinPoint,可以被AOP控制的方法( 暗含方法执行时的相关信息)<br>●通知: Advice,指哪些重复的逻辑,也就是共性功能(最终体现为一个方法)<br>●切入点: PointCut,匹配连接点的条件,通知仅会在切入点方法执行时被应用<br>●切面: Aspect,描述通知与切入点的对应关系(通知+切入点)<br>●目标对象: Target, 通知所应用的对象  </p>
+<h3 id="通知"><a href="#通知" class="headerlink" title="通知"></a>通知</h3><h4 id="通知类型"><a href="#通知类型" class="headerlink" title="通知类型"></a>通知类型</h4><ol>
+<li>@Around: 环绕通知，此注解标注的通知方法在目标方法前、后都被执行</li>
+<li>@Before: 前置通知，此注解标注的通知方法在目标方法前被执行</li>
+<li>@After :后置通知，此注解标注的通知方法在目标方法后被执行，无论是否有异常都会执行</li>
+<li>@AfterReturning :返回后通知， 此注解标注的通知方法在目标方法后被执行，有异常不会执行</li>
+<li>@AfterThrowing :异常后通知，此注解标注的通知方法发生异常后执行</li>
+</ol>
+<h4 id="通知顺序"><a href="#通知顺序" class="headerlink" title="通知顺序"></a>通知顺序</h4><ol>
+<li>不同切面类中，默认按照切面类的类名字母排序:<br>◆目标方法前的通知方法:字母排名靠前的先执行<br>◆目标方法后的通知方法:字母排名靠前的后执行  </li>
+<li>用@Order(数字)加在切面类上来控制顺序<br>◆目标方法前的通知方法:数字小的先执行<br>◆目标方法后的通知方法:数字小的后执行</li>
+</ol>
+<h3 id="切入点表达式-execution"><a href="#切入点表达式-execution" class="headerlink" title="切入点表达式-execution"></a>切入点表达式-execution</h3><ol>
+<li>execution主要根据方法的返回值、包名、类名、方法名、方法参数等信息来匹配，语法为:<br>execution(访问修饰符?返回值包名 .类名. ?方法名(方法参数) throws异常)<br>●其中带 ?的表示可以省略的部分<br>◆访问修饰符:可省略(比如:public、protected)<br>◆包名.类名:可省略<br>◆throws 异常:可省略(注意是方法.上声明抛出的异常，不是实际抛出的异常)  </li>
+<li>execution(@annotion(自定义注解的全类名))<br>在要匹配的方法上加上自定义注解</li>
+</ol>
+<h3 id="连接点"><a href="#连接点" class="headerlink" title="连接点"></a>连接点</h3><p>●在Spring中 用JoinPoint抽象了连接点，用它可以获得方法执行时的相关信息，如目标类名、方法名、方法参数等。<br>➢对于@Around通知，获取连接点信息只能使用ProceedingJoinPoint<br>➢对于其他四种通知，获取连接点信息只能使用  JoinPoint ，它是ProceedingJoinPoint 的父类型  </p>
+<p>String className &#x3D; joinPoint . getTarget(). getClass(). getName(); &#x2F;&#x2F;获取目标类名<br>Signature signature &#x3D; joinPoint . getSignature(); &#x2F;&#x2F;获取目标方法签名<br>String methodName &#x3D; joinPoint . getSignature(). getName(); &#x2F;&#x2F;获取目标方法名<br>Object[] args &#x3D; joinPoint. getArgs(); &#x2F;&#x2F;获取目标方法运行参数  </p>
 
     </div>
 
@@ -240,12 +264,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/03/18/study-Thread/" rel="prev" title="study_Thread">
-      <i class="fa fa-chevron-left"></i> study_Thread
+    <a href="/2024/05/03/%E4%BA%8B%E5%8A%A1%E5%92%8C%E7%B4%A2%E5%BC%95/" rel="prev" title="事务和索引">
+      <i class="fa fa-chevron-left"></i> 事务和索引
     </a></div>
       <div class="post-nav-item">
-    <a href="/2024/04/27/%E5%8F%8D%E5%B0%84/" rel="next" title="反射">
-      反射 <i class="fa fa-chevron-right"></i>
+    <a href="/2024/05/08/MybatisPlus/" rel="next" title="MybatisPlus">
+      MybatisPlus <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -305,7 +329,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Junit%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%EF%BC%88Juint4%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">Junit单元测试框架常用注解（Juint4）</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AOP"><span class="nav-number">1.</span> <span class="nav-text">AOP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AOP%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">AOP核心概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E7%9F%A5"><span class="nav-number">2.0.1.</span> <span class="nav-text">通知</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E7%9F%A5%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.0.1.1.</span> <span class="nav-text">通知类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E7%9F%A5%E9%A1%BA%E5%BA%8F"><span class="nav-number">2.0.1.2.</span> <span class="nav-text">通知顺序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%87%E5%85%A5%E7%82%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F-execution"><span class="nav-number">2.0.2.</span> <span class="nav-text">切入点表达式-execution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E7%82%B9"><span class="nav-number">2.0.3.</span> <span class="nav-text">连接点</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
