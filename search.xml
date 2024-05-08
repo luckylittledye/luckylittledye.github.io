@@ -25,15 +25,15 @@
 ]]></content>
   </entry>
   <entry>
-    <title>MybatisPlus</title>
-    <url>/2024/05/08/MybatisPlus/</url>
-    <content><![CDATA[<h1 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h1><img src="D:/blog/source/_posts/md/MybatisPlus1.jpg"/>
-![图片](D:/blog/source/_posts/md/MybatisPlus1.jpg)]]></content>
-  </entry>
-  <entry>
     <title>Junit</title>
     <url>/2024/04/23/Junit/</url>
     <content><![CDATA[<h1 id="Junit单元测试框架常用注解（Juint4）"><a href="#Junit单元测试框架常用注解（Juint4）" class="headerlink" title="Junit单元测试框架常用注解（Juint4）"></a>Junit单元测试框架常用注解（Juint4）</h1><p>@Test&emsp;测试类中的方法必须用它修饰才能成为测试方法，才能启动执行<br>@Before&emsp;用来修饰一个实例方法， 该方法会在每一一个测 试方法执行之前执行一次。<br>@After&emsp;来修饰一个实例方法， 该方法会在每一一个测 试方法执行之后执行一-次。<br>@BeforeClass&emsp;用来修饰一个静态方法， 该方法会在所有 测试方法之前只执行一次。<br>@AfterClass&emsp;用来修饰一个静态方法，该方法会在所有测试方法之后只执行一-次。<br>●在测试方法执行前执行的方法, 常用于:初始化资源。<br>●在测试方法执行完后再执行的方法，常用于:释放资源。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>MybatisPlus</title>
+    <url>/2024/05/08/MybatisPlus/</url>
+    <content><![CDATA[<h1 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h1><p><img src="D:/blog/source/_posts/md/MybatisPlus1.png" alt="图片"></p>
 ]]></content>
   </entry>
   <entry>
@@ -65,15 +65,26 @@
 ]]></content>
   </entry>
   <entry>
+    <title>my-first blog</title>
+    <url>/2024/02/13/my-first-blog/</url>
+    <content><![CDATA[<p>这是我的第一个博客。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>maven项目</title>
     <url>/2024/04/28/maven%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<h1 id="maven项目目录情况"><a href="#maven项目目录情况" class="headerlink" title="maven项目目录情况"></a>maven项目目录情况</h1><p><em>-src<br>&emsp;-main&emsp;&#x2F;&#x2F;存放项目资源<br>&emsp;&emsp;-java&emsp;&#x2F;&#x2F;java源代码<br>&emsp;&emsp;-resource&emsp;&#x2F;&#x2F;配置文件<br>&emsp;-test&emsp;&#x2F;&#x2F;存放测试资源<br>&emsp;&emsp;-java&emsp;&#x2F;&#x2F;java源代码<br>&emsp;&emsp;-resource&emsp;&#x2F;&#x2F;配置文件(不常用)</em>  </p>
 ]]></content>
   </entry>
   <entry>
-    <title>my-first blog</title>
-    <url>/2024/02/13/my-first-blog/</url>
-    <content><![CDATA[<p>这是我的第一个博客。</p>
+    <title>事务和索引</title>
+    <url>/2024/05/03/%E4%BA%8B%E5%8A%A1%E5%92%8C%E7%B4%A2%E5%BC%95/</url>
+    <content><![CDATA[<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><p><em>开启事务：start transaction;&#x2F;begin;<br>提交事务：commit;<br>回滚事务：rollback;</em></p>
+<h3 id="四大特性（ACID）"><a href="#四大特性（ACID）" class="headerlink" title="四大特性（ACID）"></a>四大特性（ACID）</h3><p><em>原子性：事务是不可分割的最小单元，要么全部成功，要么全部失败；<br>一致性：事务完成时，必须使所有的数据都保持一致状态；<br>隔离性：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行；<br>持久性：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</em>  </p>
+<h3 id="spring事务管理"><a href="#spring事务管理" class="headerlink" title="spring事务管理"></a>spring事务管理</h3><p><em>spring事务管理注解:@Transactional(rollbackfor,propagation)<br>-rollbackfor控制出现何种异常类型后回滚事务<br>&emsp;Exception.class：任何异常都回滚事务<br>-propagation控制事务传播行为<br>&emsp;REQUIRED：默认，需要事务，有则加入，无则创建新事务<br>&emsp;REQUIRES_NEW：需要新事务，无论有无，总是创建新事务</em>  </p>
+<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p><em>帮助数据库高效获取数据的数据结构。</em>  </p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p><em>提高数据查询的效率，降低数据库的IO成本。<br>通过索引列对数据进行排序，降低数据排序的成本，降低CPU消耗。</em>  </p>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p><em>索引会 占用存储空间。<br>索引大大提高了查询效率，同时却也降低了insert、update、delete的效率。</em></p>
 ]]></content>
   </entry>
   <entry>
@@ -102,17 +113,6 @@
 <h1 id="创建线程池"><a href="#创建线程池" class="headerlink" title="创建线程池"></a>创建线程池</h1><p><em>public ThreadPoolExecutor(&emsp;int corePoolSize,&#x2F;&#x2F;核心线程数量<br>&emsp;&emsp;&emsp;&emsp;int maximumPoolSize,&emsp;&#x2F;&#x2F;最大线程数量<br>&emsp;&emsp;&emsp;&emsp;long keepAliveTime,&emsp;&#x2F;&#x2F;临时线程存活时间<br>&emsp;&emsp;&emsp;&emsp;TimeUnit unit,&emsp;&#x2F;&#x2F;临时线程存活时间单位<br>&emsp;&emsp;&emsp;&emsp;BlockingQueue&lt;<code>Runnable</code>&gt; workQueue,&emsp;&#x2F;&#x2F;指定任务队列<br>&emsp;&emsp;&emsp;&emsp;ThreadFactory threadFactory,&emsp;&#x2F;&#x2F;指定线程工厂<br>&emsp;&emsp;&emsp;&emsp;RejectedExecutionHandler handler&emsp;&#x2F;&#x2F;任务拒绝策略)</em></p>
 <h1 id="线程池处理任务"><a href="#线程池处理任务" class="headerlink" title="线程池处理任务"></a>线程池处理任务</h1><p><em>void execute(Runnable command)&emsp;&#x2F;&#x2F;处理Runnable任务<br>Future&lt;<code>T</code>&gt; submit(Callable&lt;<code>T</code>&gt; task)&emsp;&#x2F;&#x2F;执行Callable任务，返回未来任务对象，用于获取线程返回结果<br>void shutdown()&emsp;&#x2F;&#x2F;等全部任务执行完关闭线程池<br>List&lt;<code>Runnable</code>&gt; shutdownNow()&emsp;&#x2F;&#x2F;立刻关闭线程池</em></p>
 <h1 id="线程池任务拒绝策略"><a href="#线程池任务拒绝策略" class="headerlink" title="线程池任务拒绝策略"></a>线程池任务拒绝策略</h1><p><em>ThreadPoolExecutor.AbortPolicy &emsp;&#x2F;&#x2F;丢弃任务并抛出异常，默认策略<br>ThreadPoolExecutor.DiscardPolicy &emsp;&#x2F;&#x2F;丢弃任务但不抛出异常<br>ThreadPoolExecutor.DiscardOldestPolicy &emsp;&#x2F;&#x2F;抛弃队列等待最久的任务，然后把当前任务加入队列<br>ThreadPoolExecutor.CallerRunsPolicy &emsp;&#x2F;&#x2F;由主线程负责调用任务方法从而绕过线程池直接执行</em>  </p>
-]]></content>
-  </entry>
-  <entry>
-    <title>事务和索引</title>
-    <url>/2024/05/03/%E4%BA%8B%E5%8A%A1%E5%92%8C%E7%B4%A2%E5%BC%95/</url>
-    <content><![CDATA[<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><p><em>开启事务：start transaction;&#x2F;begin;<br>提交事务：commit;<br>回滚事务：rollback;</em></p>
-<h3 id="四大特性（ACID）"><a href="#四大特性（ACID）" class="headerlink" title="四大特性（ACID）"></a>四大特性（ACID）</h3><p><em>原子性：事务是不可分割的最小单元，要么全部成功，要么全部失败；<br>一致性：事务完成时，必须使所有的数据都保持一致状态；<br>隔离性：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行；<br>持久性：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</em>  </p>
-<h3 id="spring事务管理"><a href="#spring事务管理" class="headerlink" title="spring事务管理"></a>spring事务管理</h3><p><em>spring事务管理注解:@Transactional(rollbackfor,propagation)<br>-rollbackfor控制出现何种异常类型后回滚事务<br>&emsp;Exception.class：任何异常都回滚事务<br>-propagation控制事务传播行为<br>&emsp;REQUIRED：默认，需要事务，有则加入，无则创建新事务<br>&emsp;REQUIRES_NEW：需要新事务，无论有无，总是创建新事务</em>  </p>
-<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p><em>帮助数据库高效获取数据的数据结构。</em>  </p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p><em>提高数据查询的效率，降低数据库的IO成本。<br>通过索引列对数据进行排序，降低数据排序的成本，降低CPU消耗。</em>  </p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p><em>索引会 占用存储空间。<br>索引大大提高了查询效率，同时却也降低了insert、update、delete的效率。</em></p>
 ]]></content>
   </entry>
   <entry>
